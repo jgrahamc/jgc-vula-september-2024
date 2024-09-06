@@ -1,0 +1,9 @@
+SUB ClearWindow(TL,BR)
+	SHARED StartInk
+	REG %AX,&H0600
+	REG %BX,StartInk
+	REG %CX,TL
+	REG %DX,BR
+	CALL INTERRUPT &H10
+END SUB
+
